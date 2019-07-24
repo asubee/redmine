@@ -1,5 +1,5 @@
 #!/bin/bash -e
-touch config/configuration.yml
-file=/config/configuration.yml
+touch /usr/src/redmine/config/configuration.yml
+file=/usr/src/redmine//config/configuration.yml
 
 echo "" >> $file
