@@ -1,2 +1,2 @@
 #!/bin/bash -e
-mv /tmp/src/configuration.yml  /usr/src/redmine/config/configuration.yml
+mv /tmp/src/configuration.yml  /usr/src/redmine/config/
