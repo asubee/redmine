@@ -1,1 +1,5 @@
+#!/bin/bash -e
+touch config/configuration.yml
+file=/config/configuration.yml
 
+echo "" >> $file
