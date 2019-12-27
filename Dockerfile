@@ -1,6 +1,6 @@
 # redmine customize
 FROM redmine:4.0
-LABEL maintainer="Arakawa Asuka"
+LABEL maintainer="asubee"
 
 #環境変数の自動設定
 ENV REDMINE_DB_MYSQL mysql

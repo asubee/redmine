@@ -9,5 +9,5 @@
 下記コマンドで実行する。
 
 ```
-docker run -d --name redmine --restart=always -p 80:3000 --link=mysql:mysql --network bridge -e REDMINE_DB_MYSQL=mysql -e REDMINE_DB_USERNAME=mysql -e REDMINE_DB_PASSWORD=mysql -e REDMINE_DB_DATABASE=redmine -e TZ=Asia/Tokyo -v main-redmine-files:/usr/redmine/files llasuka/redmine
+docker run -d --name redmine --restart=always -p 80:3000 --link=mysql:mysql --network bridge -e REDMINE_DB_MYSQL=mysql -e REDMINE_DB_USERNAME=mysql -e REDMINE_DB_PASSWORD=mysql -e REDMINE_DB_DATABASE=redmine -e TZ=Asia/Tokyo -v main-redmine-files:/usr/redmine/files asubee/redmine
 ```
