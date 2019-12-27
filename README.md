@@ -1,7 +1,6 @@
 # Redmine
 公式Dockerイメージに、プラグインやテーマなどを追加するDockerfile。リポジトリの中にあるファイルを、下記ディレクトリにコピーする。
 1. redmine plugins(plugins -> /usr/src/redmine/plugins)
-1. redmine vendor/plugins(vplugins -> /usr/src/redmine/vendor/plugins)
 1. redmine public/themes(themes -> /usr/src/redmine/public/themes)
 1. redmine config(config/configuration.yaml -> /usr/src/redmine/config/configuration.yaml)
 
