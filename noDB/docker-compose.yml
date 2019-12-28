@@ -1,0 +1,26 @@
+version: '2'
+
+# redmine with postgres
+
+services:
+  redmine:
+    build:
+      context: ../build/
+      dockerfile: Dockerfile
+    container_name: redmine
+    volumes:
+      - main-redmine-files:/usr/redmine/files
+    ports:
+      - "3000:3000"
+    restart: always
+    environment:
+      REDMINE_DB_MYSQL: 192.168.11.4 
+      REDMINE_DB_USERNAME: redmine
+      REDMINE_DB_PASSWORD: Wb0ux3iNQ94dQVdz
+      REDMINE_DB_DATABASE: redmine
+      REDMINE_DB_PORT: 3307
+
+volumes:
+  main-redmine-files:
+    external: true
+

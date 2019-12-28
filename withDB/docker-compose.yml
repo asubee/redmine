@@ -1,0 +1,39 @@
+version: '2'
+
+# redmine with postgres
+
+services:
+  postgres:
+    image: postgres
+    container_name: postgres
+    volumes:
+      - main-redmine-db:/var/lib/mysql
+    restart: always
+    environment:
+      POSTGRES_DB: redmine
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: redmine
+
+  redmine:
+    build:
+      context: ../build/
+      dockerfile: Dockerfile
+    container_name: redmine
+    volumes:
+      - main-redmine-files:/usr/redmine/files
+    ports:
+      - "3000:3000"
+    links:
+      - postgres
+    restart: always
+    environment:
+      REDMINE_DB_POSTGRES: postgres 
+      REDMINE_DB_USERNAME: redmine
+      REDMINE_DB_PASSWORD: postgres
+      REDMINE_DB_DATABASE: redmine
+
+volumes:
+  main-redmine-db:
+    external: true
+  main-redmine-files:
+    external: true
