@@ -7,7 +7,7 @@ services:
     image: postgres
     container_name: postgres
     volumes:
-      - main-redmine-db:/var/lib/mysql
+      - main-redmine-db:/var/lib/postgresql
     restart: always
     environment:
       POSTGRES_DB: redmine
