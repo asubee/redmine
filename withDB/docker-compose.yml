@@ -5,9 +5,8 @@ version: '2'
 services:
   postgres:
     image: postgres
-    container_name: postgres
     volumes:
-      - main-redmine-db:/var/lib/postgresql/data
+      - redmine-db:/var/lib/postgresql/data
     restart: always
     environment:
       POSTGRES_DB: redmine
@@ -18,9 +17,8 @@ services:
     build:
       context: ../build/
       dockerfile: Dockerfile
-    container_name: redmine
     volumes:
-      - main-redmine-files:/usr/redmine/files
+      - redmine-files:/usr/redmine/files
     ports:
       - "3000:3000"
     links:
@@ -33,7 +31,7 @@ services:
       REDMINE_DB_DATABASE: redmine
 
 volumes:
-  main-redmine-db:
+  redmine-db:
     external: true
-  main-redmine-files:
+  redmine-files:
     external: true
