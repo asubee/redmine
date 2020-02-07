@@ -1,4 +1,0 @@
-[submodule "build/themes/bleuclair"]
-	path = build/themes/bleuclair
-	url = https://github.com/farend/redmine_theme_farend_bleuclair.git
-	branch = redmine4.0

@@ -1,5 +1,5 @@
 # redmine customize
-FROM redmine:4.0
+FROM redmine:4.1
 LABEL maintainer="asubee"
 
 #環境変数の自動設定
