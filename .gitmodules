@@ -3,5 +3,5 @@
 	url = https://github.com/farend/redmine_theme_farend_bleuclair.git
 	branch = redmine4.1
 [submodule "build/plugins/latex"]
-	path = build/plugins/latex
+	path = build/plugins/redmine_latex_mathjax
 	url = https://github.com/mboratko/redmine_latex_mathjax
