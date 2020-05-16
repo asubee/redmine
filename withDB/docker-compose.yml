@@ -19,7 +19,7 @@ services:
       context: ../build/
       dockerfile: Dockerfile
     volumes:
-      - redmine-files:/usr/redmine/files
+      - redmine-files:/usr/src/redmine/files
     ports:
       - "3000:3000"
     links:

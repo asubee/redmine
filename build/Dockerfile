@@ -1,5 +1,5 @@
 # redmine customize
-FROM redmine:4.1
+FROM redmine:latest
 LABEL maintainer="asubee"
 
 #環境変数の自動設定
@@ -14,3 +14,5 @@ COPY themes /usr/src/redmine/public/themes
 # configurationファイルのコピー
 COPY config/configuration.yml /usr/src/redmine/config/
 
+# macros.rbファイルのコピー
+COPY config/macros.rb /usr/src/redmine/lib/redmine/wiki_formatting/macros.rb
