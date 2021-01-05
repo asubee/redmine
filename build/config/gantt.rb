@@ -67,7 +67,7 @@ module Redmine
           @year_from ||= User.current.today.year
           if @month_from == 0
             @month_from = 12
-            @year_from ||= User.current.today.year
+            @year_from = User.current.today.year - 1
           end
 #          @month_from ||= User.current.today.month
 #          @year_from ||= User.current.today.year
