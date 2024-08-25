@@ -15,7 +15,7 @@ COPY ./openshift/redmine/config/gantt.rb /usr/src/redmine/lib/redmine/helpers/
 # macros.rbファイルのコピー
 COPY ./openshift/redmine/config/macros.rb /usr/src/redmine/lib/redmine/wiki_formatting/macros.rb
 
-#RUN chgrp -R 0 /usr/src/redmine && chmod -R g=u /usr/src/redmine
+RUN chgrp -R 1001 /usr/src/redmine && chmod -R g=u /usr/src/redmine
 USER 1001
 ENTRYPOINT ["/docker-entrypoint.sh"]
 EXPOSE map[3000/tcp:{}]
