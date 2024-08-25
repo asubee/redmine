@@ -12,6 +12,16 @@ default:
   encoding: utf8mb4
   variables:
 
+production:
+  adapter: mysql2
+  database: ${REDMINE_DB_MYSQL}
+  host: ${REDMINE_DB_DATABASE}
+  username: ${REDMINE_DB_USERNAME}
+  password: ${REDMINE_DB_PASSWORD}
+  # Use "utf8" instead of "utfmb4" for MySQL prior to 5.7.7
+  encoding: utf8mb4
+  variables:
+
 
 # Recommended `transaction_isolation` for MySQL to avoid concurrency issues is
 # `READ-COMMITTED`.
