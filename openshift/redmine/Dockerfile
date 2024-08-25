@@ -19,7 +19,7 @@ COPY ./openshift/redmine/config/macros.rb /usr/src/redmine/lib/redmine/wiki_form
 
 RUN gem install redmine_extensions
 
-RUN chmod -R 999 /usr/src/redmine
+RUN chmod -R 777 /usr/src/redmine
 # USER 1001
 ENTRYPOINT ["/docker-entrypoint.sh"]
 EXPOSE map[3000/tcp:{}]
