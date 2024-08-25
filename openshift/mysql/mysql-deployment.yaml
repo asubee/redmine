@@ -22,7 +22,7 @@ spec:
           claimName: mysql-pvc
       containers:
       - name: mysql
-        image: mysql:latest
+        image: mysql:8.1
         args:
         - --character-set-server=utf8mb4
         - --collation-server=utf8mb4_unicode_ci
@@ -43,7 +43,7 @@ spec:
               name: mysql-secret
               key: mysql-password
         - name: MYSQL_DATABASE
-          value: wordpress
+          value: redmine
         - name: TZ
           value: Asia/Tokyo
         ports:

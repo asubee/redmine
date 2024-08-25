@@ -23,11 +23,11 @@ spec:
         image: >-
           image-registry.openshift-image-registry.svc:5000/tak01/redmine:latest
         env:
-        - name: REDMINE_DB_POSTGRES
+        - name: REDMINE_DB_MYSQL
           valueFrom:
             secretKeyRef:
               name: redmine-secret
-              key: redmine-db-postgres
+              key: redmine-db-mysql
         - name: REDMINE_DB_USERNAME
           valueFrom:
             secretKeyRef:
