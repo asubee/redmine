@@ -12,6 +12,8 @@ COPY ./openshift/redmine/themes /usr/src/redmine/public/themes
 # configurationファイルのコピー
 COPY ./openshift/redmine/config/configuration.yml /usr/src/redmine/config/
 COPY ./openshift/redmine/config/gantt.rb /usr/src/redmine/lib/redmine/helpers/
+COPY ./openshift/redmine/config/database.yml /usr/src/redmine/config/
+
 # macros.rbファイルのコピー
 COPY ./openshift/redmine/config/macros.rb /usr/src/redmine/lib/redmine/wiki_formatting/macros.rb
 
