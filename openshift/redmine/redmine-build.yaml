@@ -15,7 +15,7 @@ spec:
   source:
     type: Git
     git:
-      uri: https://github.com/asubee/openshift-lesson.git
+      uri: https://github.com/asubee/redmine.git
   output:
     to:
       kind: ImageStreamTag
@@ -23,7 +23,7 @@ spec:
   strategy:
     type: Docker
     dockerStrategy:
-      dockerfilePath: redmine/redmine/Dockerfile
+      dockerfilePath: openshift/redmine/Dockerfile
       from:
         kind: DockerImage
         name: 'redmine:5.1'
