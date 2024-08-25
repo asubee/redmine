@@ -17,6 +17,8 @@ COPY ./openshift/redmine/config/database.yml /usr/src/redmine/config/
 # macros.rbファイルのコピー
 COPY ./openshift/redmine/config/macros.rb /usr/src/redmine/lib/redmine/wiki_formatting/macros.rb
 
+RUN gem install redmine_extensions
+
 RUN chgrp -R 1001 /usr/src/redmine && chmod -R g=u /usr/src/redmine
 USER 1001
 ENTRYPOINT ["/docker-entrypoint.sh"]
