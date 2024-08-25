@@ -8,19 +8,18 @@ default:
   host: ${REDMINE_DB_DATABASE}
   username: ${REDMINE_DB_USERNAME}
   password: ${REDMINE_DB_PASSWORD}
-
-# Use "utf8" instead of "utfmb4" for MySQL prior to 5.7.7
-encoding: utf8mb4
-variables:
+  # Use "utf8" instead of "utfmb4" for MySQL prior to 5.7.7
+  encoding: utf8mb4
+  variables:
 
 
 # Recommended `transaction_isolation` for MySQL to avoid concurrency issues is
 # `READ-COMMITTED`.
 # In case of MySQL lower than 8, the variable name is `tx_isolation`.
 # See https://www.redmine.org/projects/redmine/wiki/MySQL_configuration
-transaction_isolation: "READ-COMMITTED"
+# transaction_isolation: "READ-COMMITTED"
 
-#development:
+# development:
 #  adapter: mysql2
 #  database: redmine_development
 #  host: localhost
@@ -35,7 +34,7 @@ transaction_isolation: "READ-COMMITTED"
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-#test:
+# test:
 #  adapter: mysql2
 #  database: redmine_test
 #  host: localhost
@@ -47,7 +46,7 @@ transaction_isolation: "READ-COMMITTED"
 #  transaction_isolation: "READ-COMMITTED"
 
 # PostgreSQL configuration example
-#production:
+# production:
 #  adapter: postgresql
 #  database: redmine
 #  host: localhost
@@ -55,12 +54,12 @@ transaction_isolation: "READ-COMMITTED"
 #  password: "postgres"
 
 # SQLite3 configuration example
-#production:
+# production:
 #  adapter: sqlite3
 #  database: db/redmine.sqlite3
 
 # SQL Server configuration example
-#production:
+# production:
 #  adapter: sqlserver
 #  database: redmine
 #  host: localhost
